@@ -1,0 +1,187 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #fff;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+input, button {
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button.rojo {
+  background-color: #f44336;
+  color: white;
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+.auto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+.auto-clase {
+  background-color: #e0f7fa;
+}
+
+.moto {
+  background-color: #fce4ec;
+}
+
+.auto .delete-btn, button.eliminar {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.auto .delete-btn:hover, button.eliminar:hover {
+  background-color: #c2185b;
+}
+
+body.oscuro {
+  background: #121212;
+  color: #fff;
+}
+
+body.oscuro .container {
+  background: #1e1e1e;
+}
+
+body.oscuro input, 
+body.oscuro button {
+  background: #333;
+  color: #ddd;
+  border-color: #555;
+}
+
+body.oscuro table {
+  background: #222;
+  color: #ddd;
+}
+
+body.oscuro h1, 
+body.oscuro h2, 
+body.oscuro h3, 
+body.oscuro label,
+body.oscuro td, 
+body.oscuro th {
+  color: #fff;
+}
+
+body.oscuro input::placeholder {
+  color: #aaa;
+}
+
+body.oscuro #total {
+  color: #fff;
+}
+
+body.oscuro button.eliminar {
+  background-color: #f06292;
+  color: black;
+}
+
+input#matricula {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+body.oscuro input#matricula {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+.auto.alerta-rojo {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 2px solid red;
+}
+
+.botones {
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  input, button {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .auto {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .auto .delete-btn {
+    align-self: flex-end;
+  }
+
+  table {
+    font-size: 12px;
+  }
+}
+
+#historial table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#historial th, #historial td {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+#historial th {
+  background-color: #f7f7f7;
+}
+
+#historial .eliminar {
+  padding: 5px 10px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+body.oscuro #historial th {
+  background-color: #2c2c2c;
+}
+
+body.oscuro #historial td {
+  border-color: #444;
+}

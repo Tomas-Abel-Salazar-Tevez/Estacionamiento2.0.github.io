@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aparcamiento</title>
+  <link href="styles.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📋 Aparcamiento</h1>
+
+    <label for="matricula">🔤 Matrícula:</label>
+    <input type="text" id="matricula" placeholder="Matrícula">
+    <button type="button" onclick="agregarAuto()">Agregar Auto</button>
+    <button type="button" onclick="agregarMoto()">Agregar Moto</button>
+
+    <h2>🚗 Autos en el estacionamiento</h2>
+    <div id="autos"></div>
+
+    <h2>📆 Historial por día</h2>
+    <div>
+      <label for="filtroFecha">📅 Filtro por fecha:</label>
+      <input type="date" id="filtroFecha" onchange="renderizarHistorial()">
+      <label for="rangoDesde">📆 Desde:</label>
+      <input type="date" id="rangoDesde" onchange="renderizarHistorial()">
+      <label for="rangoHasta">📆 Hasta:</label>
+      <input type="date" id="rangoHasta" onchange="renderizarHistorial()">
+    </div>
+
+    <div id="historial"></div>
+
+    <h3>Total recaudado hoy: <span id="total">$0</span></h3>
+
+    <div class="botones">
+      <button type="button" onclick="generarPDF()">📄 Generar PDF</button>
+      <button type="button" onclick="resetearDatos()" class="rojo">🧹 Resetear Datos</button>
+      <button type="button" onclick="toggleTema()">🌗 Tema Oscuro/Claro</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
